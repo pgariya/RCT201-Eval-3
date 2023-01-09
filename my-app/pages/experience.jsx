@@ -8,7 +8,8 @@ const Experience = () => {
 
 
 <VStack gap={"10"} fontSize="15px"   w="50%" margin={"auto"} marginTop={"50px"} box-shadow= "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px" >
-
+ 
+ <Heading>Experience</Heading>
 <Box>
 1
 SDE-3 at Masai School

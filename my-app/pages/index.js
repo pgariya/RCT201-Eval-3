@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { Box, Button, Flex, Heading, HStack, Spacer, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, HStack, Spacer, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
+import Experience from './experience'
+import Projects from './projects'
 
 
 
@@ -26,13 +28,15 @@ export default function Home({data}) {
         <VStack w="30%" textAlign={"left"}>
 
           {/* <Image src={data.avatar_url} alt="profile" width={500} height={500}/> */}
-  <img src={data.avatar_url} alt="profile"  style={{width:"200px", height:"200px" ,borderRadius:"50%"}}/>     
+   <img src={data.avatar_url} alt="profile"  style={{width:"200px", height:"200px" ,borderRadius:"50%"}}/>     
           <Heading>{data.name}</Heading>
+          <Text w={"50%"}>{data.bio}</Text>
+          <Text fontWeight={"bold"}>Location : {data.location}</Text>
+          <HStack gap={"10px"}>
+          <Text fontWeight={"bold"}> Followers:{data.followers}</Text>
+          <Text fontWeight={"bold"}>following:{data.following}</Text>
 
-          <Box w={"60%"}>Full-stack Developer | FOSS | JavaScript | Typescript | NodeJS | Deno | ReactJS | HTML | CSS | Chakra-UI | MUI
-
-</Box>
-
+          </HStack>
 <HStack gap={"20"}>
   <Button>Resume</Button>
   
@@ -45,8 +49,9 @@ export default function Home({data}) {
 
         </VStack>
 
+{/* <Projects/> */}
 
-
+<Experience />
 
       </Box>
    

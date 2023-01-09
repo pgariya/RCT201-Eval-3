@@ -1,4 +1,5 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 
 const Projects = ({data}) => {
@@ -11,11 +12,16 @@ const Projects = ({data}) => {
 
 data.items.map((el) => <Box key={el.id}>
 
+<Link href={el.url}>
 <Heading fontSize={"25px"} >{el.name} </Heading>
+</Link>
 {/* <Heading>{el.full_name} </Heading> */}
 <Text>Description:{el.description}</Text>
 <Text fontSize={"20px"}>Size:{el.size}</Text>
+<Text fontSize={"20px"}>Star Count : {el.stargazers_count}</Text>
+
 <Text fontSize={"20px"} >forks:{el.forks}</Text>
+<Text fontSize={"20px"} >Language:{el.language}</Text>
 
 
 </Box>)
